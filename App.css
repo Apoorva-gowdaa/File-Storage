@@ -1,0 +1,440 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+  color:#222;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+.app{
+  width:100%;
+  min-height:100vh;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 8%;
+  background:white;
+  box-shadow:0 2px 15px rgba(0,0,0,0.08);
+  position:sticky;
+  top:0;
+  z-index:100;
+}
+
+.navbar h1{
+  color:#2563eb;
+  font-size:28px;
+}
+
+.nav-links{
+  display:flex;
+  gap:30px;
+}
+
+.nav-links a{
+  text-decoration:none;
+  color:#444;
+  font-weight:500;
+  transition:0.3s;
+}
+
+.nav-links a:hover{
+  color:#2563eb;
+}
+
+.navbar button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#2563eb;
+  color:white;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.navbar button:hover{
+  background:#1d4ed8;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:80px 8%;
+  min-height:80vh;
+  background:linear-gradient(
+    135deg,
+    #dbeafe,
+    #eff6ff
+  );
+}
+
+.left{
+  width:50%;
+}
+
+.left h2{
+  font-size:55px;
+  line-height:1.2;
+}
+
+.left span{
+  color:#2563eb;
+}
+
+.left p{
+  margin-top:20px;
+  font-size:18px;
+  color:#555;
+  max-width:500px;
+}
+
+.right{
+  width:40%;
+  display:flex;
+  justify-content:center;
+}
+
+.card{
+  width:100%;
+  max-width:400px;
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card h3{
+  margin-bottom:20px;
+}
+
+.bar{
+  width:100%;
+  height:12px;
+  background:#ddd;
+  border-radius:20px;
+  overflow:hidden;
+  margin-bottom:15px;
+}
+
+.fill{
+  width:70%;
+  height:100%;
+  background:#2563eb;
+}
+
+.stats{
+  display:flex;
+  justify-content:space-between;
+  margin-top:25px;
+}
+
+.stats h1{
+  color:#2563eb;
+}
+
+.stats span{
+  color:#666;
+}
+
+/* =========================
+   COMMON SECTION
+========================= */
+
+.upload-section,
+.folder-section,
+.search-section,
+.folders-display,
+.files-section{
+  padding:60px 8%;
+}
+
+.upload-section h2,
+.folder-section h2,
+.folders-display h2,
+.files-section h2{
+  margin-bottom:25px;
+  color:#1e293b;
+}
+
+/* =========================
+   UPLOAD BOX
+========================= */
+
+.upload-box{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.upload-box input,
+.upload-box select{
+  flex:1;
+  min-width:220px;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+.upload-box button{
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  background:#ad52a6;
+  color:white;
+  cursor:pointer;
+}
+
+.upload-box button:hover{
+  background:#1d4ed8;
+}
+
+/* =========================
+   FOLDER CREATE
+========================= */
+
+.folder-box{
+  background:white;
+  padding:30px;
+  border-radius:15px;
+  display:flex;
+  gap:15px;
+  flex-wrap:wrap;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+}
+
+.folder-box input{
+  flex:1;
+  min-width:250px;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+}
+
+.folder-box button{
+  padding:12px 25px;
+  border:none;
+  border-radius:8px;
+  background:#16a34a;
+  color:white;
+  cursor:pointer;
+}
+
+.folder-box button:hover{
+  background:#15803d;
+}
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-section input{
+  width:100%;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+  font-size:16px;
+}
+
+/* =========================
+   FOLDERS
+========================= */
+
+.folder-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+
+.folder-card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  cursor:pointer;
+  font-size:18px;
+  font-weight:600;
+  text-align:center;
+  transition:0.3s;
+  box-shadow:0 4px 15px rgba(0,0,0,0.08);
+}
+
+.folder-card:hover{
+  transform:translateY(-5px);
+}
+
+.active-folder{
+  background:#c944a6;
+  color:white;
+}
+
+/* =========================
+   FILES
+========================= */
+
+.file-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
+}
+
+.file-card{
+  background:white;
+  padding:25px;
+  border-radius:15px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  transition:0.3s;
+}
+
+.file-card:hover{
+  transform:translateY(-5px);
+}
+
+.file-card h3{
+  margin-bottom:10px;
+  color:#1e293b;
+  word-break:break-word;
+}
+
+.file-card p{
+  color:#666;
+  margin-bottom:15px;
+}
+
+.folder-tag{
+  display:inline-block;
+  padding:6px 12px;
+  background:#dbeafe;
+  color:#da53cd;
+  border-radius:20px;
+  font-size:14px;
+  margin-bottom:20px;
+}
+
+.buttons{
+  display:flex;
+  gap:10px;
+  margin-top:15px;
+}
+
+.buttons a,
+.buttons button{
+  flex:1;
+  text-align:center;
+  text-decoration:none;
+  border:none;
+  padding:10px;
+  border-radius:8px;
+  cursor:pointer;
+  color:white;
+  font-size:14px;
+}
+
+.buttons a{
+  background:#ad466a;
+}
+
+.buttons button{
+  background:#16a34a;
+}
+
+.buttons a:hover{
+  background:#cd41a0;
+}
+
+.buttons button:hover{
+  background:#15803d;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#0f172a;
+  color:white;
+  text-align:center;
+  padding:40px 20px;
+  margin-top:60px;
+}
+
+footer h3{
+  margin-bottom:10px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:900px){
+
+  .hero{
+    flex-direction:column;
+    text-align:center;
+    gap:40px;
+  }
+
+  .left,
+  .right{
+    width:100%;
+  }
+
+  .left h2{
+    font-size:40px;
+  }
+
+  .navbar{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .nav-links{
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+}
+
+@media(max-width:600px){
+
+  .left h2{
+    font-size:32px;
+  }
+
+  .upload-box,
+  .folder-box{
+    flex-direction:column;
+  }
+
+  .buttons{
+    flex-direction:column;
+  }
+}

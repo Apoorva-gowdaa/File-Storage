@@ -1,0 +1,585 @@
+/* =========================
+   GOOGLE FONT
+========================= */
+html{
+  scroll-behavior:smooth;
+}
+
+.sidebar-menu a{
+  text-decoration:none;
+  color:inherit;
+  display:block;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Poppins',sans-serif;
+}
+
+body{
+  background:#f5f7fb;
+}
+
+.home{
+  display:flex;
+  min-height:100vh;
+  background:#f5f7fb;
+}
+.dark-mode {
+  background: #121212;
+  color: white;
+}
+
+.dark-mode .sidebar,
+.dark-mode .main-content,
+.dark-mode .right-panel,
+.dark-mode .file-card,
+.dark-mode .folder-card,
+.dark-mode .activity-panel {
+  background: #1f1f1f;
+  color: white;
+}
+
+.setting-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+}
+/* =========================
+   SIDEBAR
+========================= */
+
+.sidebar{
+  width:260px;
+  background:#ffffff;
+  padding:30px 20px;
+  border-right:1px solid #e9edf5;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+}
+
+.logo h2{
+  color:#4f46e5;
+  font-size:28px;
+  font-weight:700;
+  margin-bottom:40px;
+}
+
+.sidebar-menu{
+  list-style:none;
+}
+
+.sidebar-menu li{
+  padding:14px 18px;
+  border-radius:14px;
+  margin-bottom:10px;
+  cursor:pointer;
+  transition:.3s;
+  color:#64748b;
+  font-weight:500;
+}
+
+.sidebar-menu li:hover{
+  background:#eef2ff;
+  color:#4f46e5;
+}
+
+.active{
+  background:#4f46e5;
+  color:white !important;
+}
+
+/* =========================
+   STORAGE CARD
+========================= */
+
+.storage-widget{
+  background:#f8faff;
+  border-radius:20px;
+  padding:20px;
+  margin-top:30px;
+}
+
+.storage-widget h4{
+  margin-bottom:15px;
+  color:#111827;
+}
+
+.storage-bar{
+  width:100%;
+  height:10px;
+  background:#e5e7eb;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.storage-fill{
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    #4f46e5,
+    #06b6d4
+  );
+}
+
+.storage-widget p{
+  margin-top:12px;
+  color:#64748b;
+  font-size:14px;
+}
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.main-content{
+  flex:1;
+  padding:30px;
+}
+
+/* =========================
+   TOPBAR
+========================= */
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.topbar input{
+  width:500px;
+  height:52px;
+  border:none;
+  outline:none;
+  padding:0 20px;
+  border-radius:16px;
+  background:white;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.upload-btn{
+  border:none;
+  background:#4f46e5;
+  color:white;
+  padding:12px 24px;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:600;
+}
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header{
+  margin-bottom:25px;
+}
+
+.page-header h1{
+  font-size:36px;
+  color:#111827;
+}
+
+.page-header p{
+  color:#64748b;
+  margin-top:5px;
+}
+
+/* =========================
+   TABS
+========================= */
+
+.tabs{
+  display:flex;
+  gap:15px;
+  margin-bottom:30px;
+}
+
+.tab{
+  background:white;
+  padding:10px 18px;
+  border-radius:12px;
+  color:#64748b;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.active-tab{
+  background:#4f46e5;
+  color:white;
+}
+
+/* =========================
+   SECTION HEADER
+========================= */
+
+.section-header{
+  margin-bottom:18px;
+}
+
+.section-header h3{
+  color:#111827;
+}
+
+/* =========================
+   FOLDER GRID
+========================= */
+
+.folder-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fill,minmax(200px,1fr));
+  gap:18px;
+  margin-bottom:35px;
+}
+
+.folder-card{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  display:flex;
+  align-items:center;
+  gap:15px;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+  transition:.3s;
+}
+
+.folder-card:hover{
+  transform:translateY(-5px);
+}
+
+.folder-icon{
+  font-size:34px;
+}
+
+.folder-card h4{
+  color:#111827;
+}
+
+.folder-card small{
+  color:#64748b;
+}
+
+/* =========================
+   ADD FOLDER CARD
+========================= */
+
+.add-folder-card{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
+
+.add-folder-card input{
+  width:100%;
+  height:45px;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:0 12px;
+  margin-bottom:10px;
+}
+
+.add-folder-card button{
+  width:100%;
+  height:45px;
+  border:none;
+  background:#10b981;
+  color:white;
+  border-radius:12px;
+  cursor:pointer;
+}
+/* =========================
+   RIGHT PANEL
+========================= */
+
+.right-panel{
+  width:340px;
+  padding:30px 20px;
+  background:#fafbfd;
+  border-left:1px solid #e9edf5;
+}
+
+/* =========================
+   UPLOAD CARD
+========================= */
+
+.upload-card{
+  background:white;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+  margin-bottom:25px;
+}
+
+.upload-card h3{
+  color:#111827;
+  margin-bottom:18px;
+}
+
+.upload-card input,
+.upload-card select{
+  width:100%;
+  height:48px;
+  border:1px solid #e5e7eb;
+  border-radius:12px;
+  padding:0 12px;
+  margin-bottom:12px;
+  outline:none;
+  background:#fafafa;
+}
+
+.upload-card input:focus,
+.upload-card select:focus{
+  border-color:#4f46e5;
+}
+
+.upload-file-btn{
+  width:100%;
+  height:48px;
+  border:none;
+  border-radius:12px;
+  background:linear-gradient(
+    135deg,
+    #4f46e5,
+    #6366f1
+  );
+  color:white;
+  font-weight:600;
+  cursor:pointer;
+  transition:.3s;
+}
+
+.upload-file-btn:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   ACTIVITY PANEL
+========================= */
+
+.activity-panel{
+  background:white;
+  border-radius:24px;
+  padding:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+  margin-bottom:25px;
+}
+
+.activity-panel h3{
+  color:#111827;
+  margin-bottom:18px;
+}
+
+.activity-item{
+  padding:14px;
+  border-radius:14px;
+  background:#f8fafc;
+  margin-bottom:12px;
+  transition:.3s;
+}
+
+.activity-item:hover{
+  background:#eef2ff;
+}
+
+.activity-item strong{
+  display:block;
+  color:#111827;
+  margin-bottom:4px;
+}
+
+.activity-item small{
+  color:#64748b;
+}
+
+.empty-box{
+  text-align:center;
+  padding:30px;
+  border-radius:16px;
+  background:#f8fafc;
+  color:#94a3b8;
+}
+
+/* =========================
+   QUICK STATS
+========================= */
+
+.quick-stats{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+}
+
+.mini-card{
+  background:white;
+  border-radius:20px;
+  padding:20px;
+  text-align:center;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+}
+
+.mini-card h4{
+  color:#64748b;
+  margin-bottom:10px;
+}
+
+.mini-card h2{
+  color:#4f46e5;
+}
+
+/* =========================
+   FILE GRID
+========================= */
+
+.file-grid{
+  display:grid;
+  grid-template-columns:
+  repeat(auto-fill,minmax(220px,1fr));
+  gap:18px;
+}
+
+.file-card{
+  background:white;
+  border-radius:22px;
+  padding:22px;
+  box-shadow:0 8px 25px rgba(0,0,0,.05);
+  transition:.3s;
+  cursor:pointer;
+}
+
+.file-card:hover{
+  transform:translateY(-5px);
+}
+
+.file-icon{
+  width:55px;
+  height:55px;
+  border-radius:16px;
+  background:#eef2ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:26px;
+  margin-bottom:15px;
+}
+
+.file-card h4{
+  color:#111827;
+  margin-bottom:6px;
+  word-break:break-word;
+}
+
+.file-card small{
+  color:#64748b;
+}
+
+/* =========================
+   SCROLLBAR
+========================= */
+
+::-webkit-scrollbar{
+  width:8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#cbd5e1;
+  border-radius:20px;
+}
+
+::-webkit-scrollbar-track{
+  background:#f8fafc;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.folder-card,
+.file-card,
+.upload-card,
+.activity-panel,
+.mini-card{
+  transition:all .3s ease;
+}
+
+.folder-card:hover,
+.file-card:hover,
+.mini-card:hover{
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,.08);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:1200px){
+
+  .right-panel{
+    display:none;
+  }
+
+}
+
+@media(max-width:900px){
+
+  .home{
+    flex-direction:column;
+  }
+
+  .sidebar{
+    width:100%;
+    border-right:none;
+    border-bottom:1px solid #e5e7eb;
+  }
+
+  .main-content{
+    width:100%;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .topbar{
+    flex-direction:column;
+    gap:15px;
+    align-items:stretch;
+  }
+
+  .topbar input{
+    width:100%;
+  }
+
+  .folder-grid{
+    grid-template-columns:1fr;
+  }
+
+  .file-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:500px){
+
+  .page-header h1{
+    font-size:28px;
+  }
+
+  .tabs{
+    flex-wrap:wrap;
+  }
+
+  .quick-stats{
+    grid-template-columns:1fr;
+  }
+
+}
